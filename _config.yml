@@ -2,10 +2,10 @@
 title: Sure's Blog
 SEOTitle: RMIT | Sure Blog
 header-img: img/post-bg-desk.jpg
-email: 暂无
+email: jadesure17@gmail.com
 description: "When Heaven is about to place a great responsibility on a great man,it always first frustrates his spirit and will,exhausts his muscles and bones,exposes him to starvation and poverty,harasses him by troubles and setbacks so as to stimulate his spirit,toughen his nature and enhance his abilities."
-keyword: "我的博客"
-url: "http://name.github.io"          # your host, for absolute URL
+keyword: "life, machine learning, data mining, algorithm, java, python, c#"
+url: "https://jadesure.github.io/"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/name/name.github.io.git" # you code repository
 
