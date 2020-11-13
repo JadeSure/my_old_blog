@@ -17,7 +17,7 @@ sidebar-avatar: /img/avatar_binggan.jpg      # use absolute URL, seeing it's use
 
 
 # SNS settings
-RSS: false
+RSS: true
 # weibo_username:     暂无
 zhihu_username:     暂无
 github_username:    暂无
@@ -62,7 +62,7 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID:                             #生成的clientID
   clientSecret:     #生成的clientSecret
-  repo: name.github.io    #仓库名称
+  repo: jadesure.github.io    #仓库名称
   owner:     #github用户名
   admin: 
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
@@ -96,12 +96,6 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "WP",
-        href: "https://wangpei.ink"
-    },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
-    },{
         title: "Apple",
         href: "https://apple.com"
     },{
