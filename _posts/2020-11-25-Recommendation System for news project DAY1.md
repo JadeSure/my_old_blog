@@ -4,7 +4,7 @@ title:      Recommendation System for News DAY1
 subtitle:   Question Understanding and Baseline
 date:       2020-11-25
 author:     Shuo Wang
-header-img: img/machine-learning.jpg
+header-img:  img/post-bg-swift2.jpg
 catalog: true
 tags:
     - recommendation system
