@@ -21,9 +21,9 @@ There are 300,000 users, nearly 3 million clicks, a total of 360,000 different n
 
 # The formula of evaluation index
 $score(user)$
-$$
+$
 score(user) = \sum_{k=1}^5 \frac{s(user, k)}{k}
-$$
+$
 
 for example, s(user1,1) =1 as the rest of s(user1,2), s(user1,3), s(user1, 4), s(user1, 5) is 0. So the higher rank will have a higher value. If there is no article targeted, score(user1) = 0.
 
