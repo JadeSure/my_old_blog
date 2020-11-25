@@ -20,6 +20,7 @@ News recommended scenario, this match the user behavior prediction of challenge,
 There are 300,000 users, nearly 3 million clicks, a total of 360,000 different news articles, and each news article has corresponding embedding vector presentation. The click log data of 200,000 users is selected as the training set, the click log data of 50,000 users as the test set A, and the click log data of 50,000 users as the test set B.
 
 # The formula of evaluation index
+$score(user)$
 $$
 score(user) = \sum_{k=1}^5 \frac{s(user, k)}{k}
 $$
