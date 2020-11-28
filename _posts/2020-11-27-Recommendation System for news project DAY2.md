@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Recommendation System for News DAY2
-subtitle:   Data Analysis
+subtitle:   Data Analysis (Data exploration)
 date:       2020-11-27
 author:     Shuo Wang
 header-img:  img/post-bg-swift2.jpg
@@ -10,7 +10,6 @@ tags:
     - recommendation system
     - news
     - visualization 
-    - data exploration
 ---
 
 # Relative package
