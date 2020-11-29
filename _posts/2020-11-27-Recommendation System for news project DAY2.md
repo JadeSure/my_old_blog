@@ -12,6 +12,12 @@ tags:
     - visualization 
 ---
 
+# Data description
+four files:
+- article.csv includes article attributes (article id, category id, time stamp, words count)
+- article_emb.csv includes article embedding with (totally 250 ways)
+- train_click_log.csv includes user id, click article
+
 # Relative package
 - only predict the last article news
 - convert log info to: features + labels(click on the probability, then, it is a classification question)
