@@ -48,24 +48,58 @@ github == Docker Hub (repo)
 Docker focuses more on the system level, which can be used to control the environment in the same version(dependencies). Firstly, users can download an image from Docker Hub, then initialize it to an instance that has the same environment as an image. After editing, this container can be reversed to an image that will be passed to other users to share the same editing and environment. It is very convenient in version control and reproduced the results.
 
 # Basic commands operations
-Use docker `container my_command`
+Use docker `container <my_command>`
 
 `create` — Create a container from an image.
 
-start — Start an existing container.
+`start` — Start an existing container.
 
-run — Create a new container and start it.
+`run` — Create a new container and start it.
 
-ls — List running containers.
+`ls` — List running containers.
 
-inspect — See lots of info about a container.
+`inspect` — See lots of info about a container.
 
-logs — Print logs.
+`logs` — Print logs.
 
-stop — Gracefully stop running container.
+`stop` — Gracefully stop running container.
 
-kill —Stop main process in container abruptly.
+`kill` — Stop main process in container abruptly.
 
-rm— Delete a stopped container.
+`rm` — Delete a stopped container.
+
+`docker system df` — show docker disk usage (check how many image and container we are using).
+
+e.g. `docker image ls` — list how many images we have on our local machine
+
+`docker image ls ubuntu`  — list all ubuntu related images
+
+`docker run -it <the first three image ID> bash`  — run a container on top of the image (create a new contianer based on the image)
+
+`docker container ls -a`  — -a means that we list the containers no matter it is exited or up
+
+`docker container start <container ID>` — start the container that is in exited situation
+
+`docker export <container ID> -o <file name>.tar` — export the container in which you have created a new folder to local tar file
+
+`docker import <file name>.tar` — import our modified container(other users') to our docker system; after imported the container as a new local image, we can use docker tag command to give it a repositoriy name and tag by `docker tag <container ID> <repository name>:<tag value>`.
+
+`docker exec -it <container ID> bash` — this command will enter the container that is currently running
+## ATTENTION：
+    `start` will open a new container rather than enter the previous one
+    
+`docker image rm <container ID>` — remove image from docker (You may need to remove relative container first by `docker container rm <container ID> or shut down container first before remove container by `docker container stop <container ID>`)
 
 [commands operation docs](https://docs.docker.com/engine/reference/commandline/docker/)
+
+# What's Dockerfile
+A text document that contains the commands a uers could call on the command line to assemble an image, which can create an automated build that executes several command-line instructions in succession.
+
+docker file begain with:
+
+`FROM <your system>` eg. ubuntu:16.04
+
+`WORKDIR ./`
+
+more commands, such as COPY, ADD, CMD, ENV [official docs](https://docs.docker.com/)
+ 
