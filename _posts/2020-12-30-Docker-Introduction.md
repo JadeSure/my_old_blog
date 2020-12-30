@@ -48,9 +48,9 @@ github == Docker Hub (repo)
 Docker focuses more on the system level, which can be used to control the environment in the same version(dependencies). Firstly, users can download an image from Docker Hub, then initialize it to an instance that has the same environment as an image. After editing, this container can be reversed to an image that will be passed to other users to share the same editing and environment. It is very convenient in version control and reproduced the results.
 
 # Basic commands operations
-Use docker 'container my_command'
+Use docker `container my_command`
 
-'create' — Create a container from an image.
+`create` — Create a container from an image.
 
 start — Start an existing container.
 
