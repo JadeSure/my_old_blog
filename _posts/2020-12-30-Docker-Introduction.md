@@ -87,7 +87,9 @@ e.g. `docker image ls` — list how many images we have on our local machine
 `docker exec -it <container ID> bash` — this command will enter the container that is currently running
 ## ATTENTION：
     `start` will open a new container rather than enter the previous one
-    
+
+`docker cp <ID>:/user/s ./` — copy file from container by container id targeted to current location
+
 `docker image rm <container ID>` — remove image from docker (You may need to remove relative container first by `docker container rm <container ID> or shut down container first before remove container by `docker container stop <container ID>`)
 
 [commands operation docs](https://docs.docker.com/engine/reference/commandline/docker/)
