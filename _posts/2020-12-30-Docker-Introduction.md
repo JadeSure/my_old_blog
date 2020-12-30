@@ -44,3 +44,28 @@ java class == image
 new instances == container
 
 github == Docker Hub (repo)
+
+Docker focuses more on the system level, which can be used to control the environment in the same version(dependencies). Firstly, users can download an image from Docker Hub, then initialize it to an instance that has the same environment as an image. After editing, this container can be reversed to an image that will be passed to other users to share the same editing and environment. It is very convenient in version control and reproduced the results.
+
+# Basic commands operations
+Use docker 'container my_command'
+
+'create' — Create a container from an image.
+
+start — Start an existing container.
+
+run — Create a new container and start it.
+
+ls — List running containers.
+
+inspect — See lots of info about a container.
+
+logs — Print logs.
+
+stop — Gracefully stop running container.
+
+kill —Stop main process in container abruptly.
+
+rm— Delete a stopped container.
+
+[commands operation docs](https://docs.docker.com/engine/reference/commandline/docker/)
