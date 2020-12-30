@@ -102,4 +102,38 @@ docker file begain with:
 `WORKDIR ./`
 
 more commands, such as COPY, ADD, CMD, ENV [official docs](https://docs.docker.com/)
+
+# Docker file examples
+```
+FROM ubuntu:16.04
+
+# && means enter
+# -y means for installation, all the things will be answer as yes
+# \ means empty space
+RUN apt-get update && apt-get install -y \
+apt-transport-https \
+python3 \
+python3-pip \
+&& pip3 install --upgrade pip \
+&& rm -rf /var/lib/apt/lists/*
+
+# set the working directory for containers
+WORKDIR /usr/src....
+
+# Copy all the files from the project's root to the working directory
+# $path is variable, to another location
+COPY $path /....
+# to check whether all the files have been copied to the target file folders
+RUN ls -la /.../*
+
+# Installing python dependencies
+# -r means read code line by line
+# requirements.txt is a dependency for python version control eg. pylint==2.4.1
+RUN pip3 install --no-cache-dir -r /... requirments.txt
+# -t means tag, name repo and id
+# path is variable to point the location path
+RUN: docker build -t hp_model:1.0 --build-arg path="/Users/....".
+```
+Then, all the dependency has been installed to the image, which can be further checked by
+`docker image ls`
  
