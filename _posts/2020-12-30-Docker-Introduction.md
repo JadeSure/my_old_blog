@@ -1,103 +1,37 @@
 ---
 layout:     post
-title:      Install TensorFlow-GPU by Anaconda (conda install tensorflow-gpu)
-subtitle:   It might be the simplest way to install Tensorflow or Tensorflow-GPU by conda install in the conda environment
-date:       2019-03-29
-author:     Wang Pei
-header-img: img/art-Anaconda-TensorFlow.jpg
+title:      Docker Operation and debug for Win10 pro(AMD 3600X CPU)
+subtitle:   Docker Introduction
+date:       2020-12-30
+author:     Shuo Wang
+header-img: img/post-bg-docker.png
 catalog: true
 tags:
-    - ubuntu
-    - TensorFlow
-    - 深度学习
-    - CUDA
+    - docker image
+    - docker container
+    - docker repository
 ---
 
+# What is Docker?
+Docker is a tool that allows developers, sys-admins etc. to easily deploy their applications in a sandbox (called containers) to run on the host operating system i.e. Linux. The key benefit of Docker is that it allows users to package an application with all of its dependencies into a standardized unit for software development. Unlike virtual machines, containers do not have high overhead and hence enable more efficient usage of the underlying system and resources.
+It includes 
 
-# Install TensorFlow-GPU by Anaconda (conda install tensorflow-gpu)
+# What is Container? Different with Virtual Machine?
+The industry standard today is to use Virtual Machines (VMs) to run software applications. VMs run applications inside a guest Operating System, which runs on virtual hardware powered by the server’s host OS.
+VMs are great at providing full process isolation for applications: there are very few ways a problem in the host operating system can affect the software running in the guest operating system, and vice-versa. But this isolation comes at great cost — the computational overhead spent virtualizing hardware for a guest OS to use is substantial.
+Containers take a different approach: by leveraging the low-level mechanics of the host operating system, containers provide most of the isolation of virtual machines at a fraction of the computing power.
+Containers offer a logical packaging mechanism in which applications can be abstracted from the environment in which they actually run. This decoupling allows container-based applications to be deployed easily and consistently, regardless of whether the target environment is a private data center, the public cloud, or even a developer’s personal laptop. This gives developers the ability to create predictable environments that are isolated from the rest of the applications and can be run anywhere.
+From an operations standpoint, apart from portability containers also give more granular control over resources giving your infrastructure improved efficiency which can result in better utilization of your compute resources.
+Due to these benefits, containers (& Docker) have seen widespread adoption. Companies like Google, Facebook, Netflix and Salesforce leverage containers to make large engineering teams more productive and to improve utilization of compute resources. In fact, Google credited containers for eliminating the need for an entire data center.
 
-It might be the simplest way to install Tensorflow or Tensorflow-GPU by conda install in the conda environment  
---
+# What is the structure of Docker?
+Docker Image: The basis of a Docker container. Represents a full application.
+Docker Container: The standard unit in which the application service resides and executes.
+Docker Engine: Creates, ships and runs Docker containers deployable on a physical or virtual, host locally, in a datacenter or cloud service provider.
+repo (Docker Hub(Public) or Docker Trusted): Cloud or server based storage and distribution service for your images.
 
-Nowadays, there are many tutorials that instruct how to install tensorflow or tensorflow-gpu. However, some people may feel it too complex just like me, because in those ways, you should download and install [NVIDIA drivers](https://www.nvidia.com/Download/index.aspx?lang=en-us), and then download and install [CUDA](https://developer.nvidia.com/cuda-downloads) (users need to pay attention to the version), afterwards you may sign an agreement and download cuDNN in [NVIDIA Developer](https://developer.nvidia.com/cudnn). Next, install python, and pip install tensorflow-gpu and so on. It's not esay for developer to do these, let alone it might causes some other error such as **version not match**, or **conflict between other python libraries** and so on. Moreover, if you want to [install tensorflow by compilation](https://www.tensorflow.org/install/gpu), it may take much more time.  
-
-Thus I strongly reconmend you not to do this, there's a much easier way to install this. Please read the following article.
-
----
-
-## Install Anaconda
->[Anaconda](https://www.anaconda.com/) is a free and open-source distribution of the Python and R programming languages for scientific computing, that aims to simplify package management and deployment.   
-
-**You can download anaconda [here](https://www.anaconda.com/distribution/#download-section).**
-
-One of the advantage of anaconda is that it can create **isolated environment** in your device, and you can configure any libraries and toolkits in the 'env' without affect other environment. Once you are nor satisfied of your configuration, you can simplily delete the environment.
-
-Note that in you are in **China**, download anaconda might take a long time due to some resons that cannot say. Instead, you can download it from [**Tsinghua mirror**](https://mirror.tuna.tsinghua.edu.cn/help/anaconda/), and install it **manually**.  
-
-After downloading this successfully, try to run the installation file.
-For example, if you use ubuntu, you can cd to the path of the sh file and run the following command:
-
-```bash
-./Anaconda3-5.3.1-Linux-x86_64.sh
-```
-***Attention that you should change the command above to your own installation file name.***
-
-Then you will successfully install Anaconda!
-
-## Create new environment by conda
-
-If you are unwilling to create conda environment (maybe because of lazy), you can skip this section. However, I strongly reconmend you to create this **for the convience in the future**.  
-
-Run the command below:
-```bash
-conda create -n tf
-```
-![picture1](/img/20190328post.jpg)
-
-'tf' is the name of your new conda environment, you can try other names as your own interest.
-
-For other management you conda env, you can read [this](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?highlight=environment).
-
-## Install Tensorflow
-
-First, you need to change to the env you have just built by conda:
-```bash
-source activete tf
-```
-![picture2](/img/20190328post2.jpg)  
-
-For Chinese users, before starting the installation, you may change the source of conda as the same reason before. For more details, read the webcite of [Tsinghua Mirror](https://mirror.tuna.tsinghua.edu.cn/help/anaconda/).
-Chinese users should type in this:
-```bash
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
-conda config --set show_channel_urls yes
-```
-
-
-Afterwards, type in the command to install TensorFlow you need:
-```bash
-conda install tensorflow-gpu
-```
-![picture3](/img/20190328post3.jpg)  
-
-If you want to install a specific version of tensorflow-gpu or cpu veison, you can change the command like this:
-```bash
-conda install tensorflow-gpu=1.10.0  #if you want to install 1.10.0 version
-conda install tensorflow  #if you want to install cpu version
-```
-After anaconda solve the environment, you just need to type in 'y' to confirm the installation.  
-
-Anaconda will **automatically** install other libs and toolkits needed by tensorflow(e.g. CUDA, and cuDNN), so you have no need to worry about this.
---
-
-Type in `python` to enter the python environment.
-```python
-import tensorflow as tf
-tf.__version__
-```
-When you see the version of tensorflow, such as 1.10.0, you have successfully install it.
-
-That's all, Thank you.
-
-If you encounter any problems, you can open an issue in the **Comment area**.
+# My understanding
+In oriented programming(e.g. Java): 
+java class == image
+new instances == container
+github == Docker Hub (repo)
