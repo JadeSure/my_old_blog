@@ -4,7 +4,7 @@ title:      AWS Cloud Computing Foundamental
 subtitle:   AWS Identity and Access Management(IAM), Elastic Compute Cloud(EC2)
 date:       2021-01-23
 author:     Shuo Wang
-header-img: img/post-bg-awslogo.png
+header-img: img/post-bg-awslogo.jpg
 catalog: true
 tags:
     - AWS
