@@ -1,19 +1,20 @@
 ---
 layout:     post
-title:      AWS Series 1 IAM
-subtitle:   AWS Identity and Access Management(IAM)
+title:      AWS Cloud Computing Foundamental
+subtitle:   AWS Identity and Access Management(IAM), Elastic Compute Cloud(EC2)
 date:       2021-01-23
 author:     Shuo Wang
-header-img: img/art-Anaconda-TensorFlow.jpg
+header-img: img/post-bg-aws.png
 catalog: true
 tags:
     - AWS
     - Cloud Computing
     - IAM
+    - EC2
 ---
 
 
-# What is AWS Identity and Access Management(IAM)
+# Day1 What is AWS Identity and Access Management(IAM)
 
 --
 
@@ -49,3 +50,4 @@ Roles: **the service in AWS** communicate with other services in AWS e.g. EC to 
 policies: the permission of document for the templates for specific access rights; How many resources can be accessed.
 one Role has many policies.
 
+# Day2 What is Elastic Cloud Computing(EC2)?
