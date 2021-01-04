@@ -1,16 +1,20 @@
 ---
 layout:     post
-title:      Install TensorFlow-GPU by Anaconda (conda install tensorflow-gpu)
-subtitle:   It might be the simplest way to install Tensorflow or Tensorflow-GPU by conda install in the conda environment
-date:       2019-03-29
-author:     Wang Pei
-header-img: img/art-Anaconda-TensorFlow.jpg
+title:      Electronics Lover
+subtitle:   It includes assembling, maintenance, fixing problems for PC, iPhone; Rebuild and be familiar with operation system, such as Linux, MacOS and Windows; Build firewall for Internet bar to avoid ip flooding.
+date:       2021-01-04
+author:     Shuo Wang
+header-img: img/computers_phones/post-bg-aircraft.JPG
 catalog: true
 tags:
-    - ubuntu
-    - TensorFlow
-    - 深度学习
-    - CUDA
+    - PC
+    - Phones
+    - System
+    - Linux
+    - MacOS
+    - Windows
+    - Virtual Machine
+    - Network
 ---
 
 
@@ -52,7 +56,7 @@ Run the command below:
 ```bash
 conda create -n tf
 ```
-![picture1](/img/20190328post.jpg)
+![picture1](/img/computers_phones/1.jpg)
 
 'tf' is the name of your new conda environment, you can try other names as your own interest.
 
@@ -60,44 +64,4 @@ For other management you conda env, you can read [this](https://conda.io/project
 
 ## Install Tensorflow
 
-First, you need to change to the env you have just built by conda:
-```bash
-source activete tf
-```
-![picture2](/img/20190328post2.jpg)  
 
-For Chinese users, before starting the installation, you may change the source of conda as the same reason before. For more details, read the webcite of [Tsinghua Mirror](https://mirror.tuna.tsinghua.edu.cn/help/anaconda/).
-Chinese users should type in this:
-```bash
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
-conda config --set show_channel_urls yes
-```
-
-
-Afterwards, type in the command to install TensorFlow you need:
-```bash
-conda install tensorflow-gpu
-```
-![picture3](/img/20190328post3.jpg)  
-
-If you want to install a specific version of tensorflow-gpu or cpu veison, you can change the command like this:
-```bash
-conda install tensorflow-gpu=1.10.0  #if you want to install 1.10.0 version
-conda install tensorflow  #if you want to install cpu version
-```
-After anaconda solve the environment, you just need to type in 'y' to confirm the installation.  
-
-Anaconda will **automatically** install other libs and toolkits needed by tensorflow(e.g. CUDA, and cuDNN), so you have no need to worry about this.
---
-
-Type in `python` to enter the python environment.
-```python
-import tensorflow as tf
-tf.__version__
-```
-When you see the version of tensorflow, such as 1.10.0, you have successfully install it.
-
-That's all, Thank you.
-
-If you encounter any problems, you can open an issue in the **Comment area**.
