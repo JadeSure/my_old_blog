@@ -18,7 +18,7 @@ tags:
 ---
 
 
-# Personal Profile <a href="https://github.com/JadeSure/jadesure.github.io/blob/main/Shuo_Wang_CV.pdf" download="Shuo_Wang_CV.pdf">*DOWNLOD MY CV*</a>
+# Personal Profile <a href="Shuo_Wang_CV.pdf" download="Shuo_CV.pdf">*DOWNLOAD MY CV*</a>
 
 --
 I love electronic products very much, have great enthusiasm and interest in various electronic devices, and be proficient
