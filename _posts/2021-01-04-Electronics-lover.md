@@ -40,14 +40,17 @@ Replace iphone6s, 6splus screen, battery.
 ## Install firewall in the Internet bar
 ![picture15](/img/computers_phones/firewall.jpg)
 
-## repair mobile phones
+## Repair mobile phones
 ![picture19](/img/computers_phones/phone1.JPG)
 ![picture20](/img/computers_phones/phone2.JPG)
 ![picture21](/img/computers_phones/phone3.JPG)
 
 
-## rebuild PC system, such Windows, MacOS, Virtual Machine, Linux
+## Rebuild PC system, such Windows, MacOS, Virtual Machine, Linux
 ![picture16](/img/computers_phones/sys1.JPG)
+
+MacOS install windows10 and Windows OS install MacOS by virtual Machine
+
 ![picture17](/img/computers_phones/sys2.JPG)
 ![picture18](/img/computers_phones/sys3.JPG)
 
