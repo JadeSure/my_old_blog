@@ -40,36 +40,34 @@ Replace iphone6s, 6splus screen, battery.
 
 ## Computers Assembly, reinstall the PC system and repair hardware in Absolute Solution
 ![picture1](/img/computers_phones/c3.jpg)
-![picture2](/img/computers_phones/c4.jpg =100x100)
-
-<img src="./img/computers_phones/c4.jpg width = "300" height = "200" alt="Oops" align=center />
+![picture2](/img/computers_phones/c4.jpg)
                                                                                
-![picture3](/img/computers_phones/c2.jpg =500x500)
-![picture4](/img/computers_phones/c1.jpg =500x500)
-![picture5](/img/computers_phones/c5.jpg =500x500)
-![picture6](/img/computers_phones/c6.jpg =500x500)
-![picture7](/img/computers_phones/parts1.jpg =500x500)
-![picture8](/img/computers_phones/parts2.jpg =500x500)
-![picture9](/img/computers_phones/parts3.jpg =500x500)
-![picture10](/img/computers_phones/parts4.jpg =500x500)
-![picture11](/img/computers_phones/1.jpg =500x500)
+![picture3](/img/computers_phones/c2.jpg)
+![picture4](/img/computers_phones/c1.jpg)
+![picture5](/img/computers_phones/c5.jpg)
+![picture6](/img/computers_phones/c6.jpg)
+![picture7](/img/computers_phones/parts1.jpg)
+![picture8](/img/computers_phones/parts2.jpg)
+![picture9](/img/computers_phones/parts3.jpg)
+![picture10](/img/computers_phones/parts4.jpg)
+![picture11](/img/computers_phones/1.jpg)
 
 ## Computers Assembly in Centre Com
-![picture12](/img/computers_phones/cc1.jpg =500x500)
-![picture13](/img/computers_phones/cc2.jpg =500x500)
-![picture14](/img/computers_phones/cc3.jpg =500x500)
+![picture12](/img/computers_phones/cc1.jpg)
+![picture13](/img/computers_phones/cc2.jpg)
+![picture14](/img/computers_phones/cc3.jpg)
 
 ## Install firewall in the Internet bar
-![picture15](/img/computers_phones/parts2.jpg =500x500)
+![picture15](/img/computers_phones/parts2.jpg)
 
 ## rebuild PC system, such Windows, MacOS, Virtual Machine, Linux
-![picture16](/img/computers_phones/sys1.jpg =500x500)
-![picture17](/img/computers_phones/sys2.jpg =500x500)
-![picture18](/img/computers_phones/sys2.jpg =500x500)
+![picture16](/img/computers_phones/sys1.jpg)
+![picture17](/img/computers_phones/sys2.jpg)
+![picture18](/img/computers_phones/sys2.jpg)
 
 ## repair mobile phones
-![picture19](/img/computers_phones/phone1.jpg =500x500)
-![picture20](/img/computers_phones/phone2.jpg =500x500)
-![picture21](/img/computers_phones/phone3.jpg =500x500)
+![picture19](/img/computers_phones/phone1.jpg)
+![picture20](/img/computers_phones/phone2.jpg)
+![picture21](/img/computers_phones/phone3.jpg)
 
 more experiences coming...
