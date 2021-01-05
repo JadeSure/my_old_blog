@@ -18,7 +18,8 @@ tags:
 ---
 
 
-# Personal Profile
+# Personal Profile <a href="https://github.com/JadeSure/jadesure.github.io/blob/main/Shuo_Wang_CV.pdf" download="Shuo_Wang_CV.pdf">*DOWNLOD MY CV*</a>
+
 --
 I love electronic products very much, have great enthusiasm and interest in various electronic devices, and be proficient
 in operating windows, macOS, Linux. The individual holds a windows desktop computer with three monitors, MacBook
