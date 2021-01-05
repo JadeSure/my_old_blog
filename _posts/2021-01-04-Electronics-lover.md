@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Electronics Lover
-subtitle:   It includes assembling, maintenance, fixing problems for PC, iPhone; Rebuild and be familiar with operation system, such as Linux, MacOS and Windows; Build firewall for Internet bar to avoid ip flooding.
+subtitle:   It includes assembling, maintenance, fixing problems for PC, iPhone; Rebuild and be familiar with operation system, such as Linux, MacOS and Windows; Build firewall for Internet bar to avoid ping flooding.
 date:       2021-01-04
 author:     Shuo Wang
 header-img: img/computers_phones/post-bg-aircraft.JPG
@@ -56,12 +56,12 @@ MacOS install windows10 and Windows OS install MacOS by virtual Machine
 ![picture18](/img/computers_phones/sys3.JPG)
 
 
-## Computers Assembly in Centre Com
+## Computers assembly in Centre Com
 ![picture12](/img/computers_phones/cc1.JPG)
 ![picture13](/img/computers_phones/cc2.JPG)
 ![picture14](/img/computers_phones/cc3.JPG)
 
-## Computers Assembly, reinstall the PC system and repair hardware in Absolute Solution
+## Computers assembly, reinstall the PC system and repair hardware in Absolute Solution
 ![picture1](/img/computers_phones/c3.jpg)
 ![picture2](/img/computers_phones/c4.JPG)
 
