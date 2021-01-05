@@ -41,7 +41,7 @@ Replace iphone6s, 6splus screen, battery.
 ## Computers Assembly, reinstall the PC system and repair hardware in Absolute Solution
 ![picture1](/img/computers_phones/c3.jpg)
 ![picture2](/img/computers_phones/c4.jpg =100x100)
-<img src="/img/computers_phones/c4.jpg width = "300" height = "200" alt="Oops" align=center />
+<img src="./img/computers_phones/c4.jpg width = "300" height = "200" alt="Oops" align=center />
 ![picture3](/img/computers_phones/c2.jpg =500x500)
 ![picture4](/img/computers_phones/c1.jpg =500x500)
 ![picture5](/img/computers_phones/c5.jpg =500x500)
