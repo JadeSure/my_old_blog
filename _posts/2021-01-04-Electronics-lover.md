@@ -18,50 +18,55 @@ tags:
 ---
 
 
-# Install TensorFlow-GPU by Anaconda (conda install tensorflow-gpu)
-
-It might be the simplest way to install Tensorflow or Tensorflow-GPU by conda install in the conda environment  
+# Personal Profile
 --
+I love electronic products very much, have great enthusiasm and interest in various electronic devices, and be proficient
+in operating windows, macOS, Linux. The individual holds a windows desktop computer with three monitors, MacBook
+pro, raspberry pi, windows laptop, iPad with apple pencil. Have strong learning ability and adaptability, work hard and
+carefully.
 
-Nowadays, there are many tutorials that instruct how to install tensorflow or tensorflow-gpu. However, some people may feel it too complex just like me, because in those ways, you should download and install [NVIDIA drivers](https://www.nvidia.com/Download/index.aspx?lang=en-us), and then download and install [CUDA](https://developer.nvidia.com/cuda-downloads) (users need to pay attention to the version), afterwards you may sign an agreement and download cuDNN in [NVIDIA Developer](https://developer.nvidia.com/cudnn). Next, install python, and pip install tensorflow-gpu and so on. It's not esay for developer to do these, let alone it might causes some other error such as **version not match**, or **conflict between other python libraries** and so on. Moreover, if you want to [install tensorflow by compilation](https://www.tensorflow.org/install/gpu), it may take much more time.  
+Two years relative experience:
 
-Thus I strongly reconmend you not to do this, there's a much easier way to install this. Please read the following article.
+Electronic Equipment Repairer.
+
+Assemble PC desktop computers, hardware equipment replacement, maintenance, and modular hardware troubleshooting;
+Install Window, macOS operating system, install various software, set up and debug;
+Repair notebook software and hardware problems, such as electronic equipment stained with water, can not reboot the
+system, and hardware damage;
+Install a firewall for the Internet cafes to avoid network attack;
+Replace iphone6s, 6splus screen, battery.
 
 ---
 
-## Install Anaconda
->[Anaconda](https://www.anaconda.com/) is a free and open-source distribution of the Python and R programming languages for scientific computing, that aims to simplify package management and deployment.   
+## Computers Assembly, reinstall the PC system and repair hardware in Absolute Solution
+![picture1](/img/computers_phones/c3.jpg =500x500)
+![picture1](/img/computers_phones/c4.jpg =500x500)
+![picture1](/img/computers_phones/c2.jpg =500x500)
+![picture1](/img/computers_phones/c1.jpg =500x500)
+![picture1](/img/computers_phones/c5.jpg =500x500)
+![picture1](/img/computers_phones/c6.jpg =500x500)
+![picture1](/img/computers_phones/parts1.jpg =500x500)
+![picture1](/img/computers_phones/parts2.jpg =500x500)
+![picture1](/img/computers_phones/parts3.jpg =500x500)
+![picture1](/img/computers_phones/parts4.jpg =500x500)
+![picture1](/img/computers_phones/1.jpg =500x500)
 
-**You can download anaconda [here](https://www.anaconda.com/distribution/#download-section).**
+## Computers Assembly in Centre Com
+![picture1](/img/computers_phones/cc1.jpg =500x500)
+![picture1](/img/computers_phones/cc2.jpg =500x500)
+![picture1](/img/computers_phones/cc3.jpg =500x500)
 
-One of the advantage of anaconda is that it can create **isolated environment** in your device, and you can configure any libraries and toolkits in the 'env' without affect other environment. Once you are nor satisfied of your configuration, you can simplily delete the environment.
+## Install firewall in the Internet bar
+![picture1](/img/computers_phones/parts2.jpg =500x500)
 
-Note that in you are in **China**, download anaconda might take a long time due to some resons that cannot say. Instead, you can download it from [**Tsinghua mirror**](https://mirror.tuna.tsinghua.edu.cn/help/anaconda/), and install it **manually**.  
+## rebuild PC system, such Windows, MacOS, Virtual Machine, Linux
+![picture1](/img/computers_phones/sys1.jpg =500x500)
+![picture1](/img/computers_phones/sys2.jpg =500x500)
+![picture1](/img/computers_phones/sys2.jpg =500x500)
 
-After downloading this successfully, try to run the installation file.
-For example, if you use ubuntu, you can cd to the path of the sh file and run the following command:
+## repair mobile phones
+![picture1](/img/computers_phones/phone1.jpg =500x500)
+![picture1](/img/computers_phones/phone2.jpg =500x500)
+![picture1](/img/computers_phones/phone3.jpg =500x500)
 
-```bash
-./Anaconda3-5.3.1-Linux-x86_64.sh
-```
-***Attention that you should change the command above to your own installation file name.***
-
-Then you will successfully install Anaconda!
-
-## Create new environment by conda
-
-If you are unwilling to create conda environment (maybe because of lazy), you can skip this section. However, I strongly reconmend you to create this **for the convience in the future**.  
-
-Run the command below:
-```bash
-conda create -n tf
-```
-![picture1](/img/computers_phones/1.jpg)
-
-'tf' is the name of your new conda environment, you can try other names as your own interest.
-
-For other management you conda env, you can read [this](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html?highlight=environment).
-
-## Install Tensorflow
-
-
+more experiences coming...
