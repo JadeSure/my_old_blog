@@ -44,13 +44,6 @@ Replace iphone6s, 6splus screen, battery.
 
 <div align="center">  
     <img src="/img/computers_phones/c2.JPG" width = "300" height = "200" alt="Oops" />
-    <img src="/img/computers_phones/c1.JPG" width = "300" height = "200" alt="Oops" />  
-    <img src="/img/computers_phones/c2.JPG" width = "300" height = "200" alt="Oops" />  
-    <img src="/img/computers_phones/c2.JPG" width = "300" height = "200" alt="Oops" />  
-    <img src="/img/computers_phones/c2.JPG" width = "300" height = "200" alt="Oops" />  
-    <img src="/img/computers_phones/c2.JPG" width = "300" height = "200" alt="Oops" />  
-    <img src="/img/computers_phones/c2.JPG" width = "300" height = "200" alt="Oops" />  
-    <img src="/img/computers_phones/c2.JPG" width = "300" height = "200" alt="Oops" />  
 </div>   
 ![picture3](/img/computers_phones/c2.JPG)
 ![picture4](/img/computers_phones/c1.JPG)
@@ -71,12 +64,12 @@ Replace iphone6s, 6splus screen, battery.
 ![picture14](/img/computers_phones/cc3.JPG)
 
 ## Install firewall in the Internet bar
-![picture15](/img/computers_phones/parts2.jpg)
+![picture15](/img/computers_phones/firewall.jpg)
 
 ## rebuild PC system, such Windows, MacOS, Virtual Machine, Linux
 ![picture16](/img/computers_phones/sys1.JPG)
 ![picture17](/img/computers_phones/sys2.JPG)
-![picture18](/img/computers_phones/sys2.JPG)
+![picture18](/img/computers_phones/sys3.JPG)
 
 ## repair mobile phones
 ![picture19](/img/computers_phones/phone1.JPG)
