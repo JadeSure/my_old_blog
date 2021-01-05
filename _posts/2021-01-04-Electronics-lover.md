@@ -43,7 +43,7 @@ Replace iphone6s, 6splus screen, battery.
 ![picture2](/img/computers_phones/c4.JPG)
 
 <div align="center">
-    <img src="./img/computers_phones/c4.JPG" width = "300" height = "200" alt="Oops" />     
+    <img src="img/computers_phones/c4.JPG" width = "300" height = "200" alt="Oops" />     
 </div>
 
 ![picture3](/img/computers_phones/c2.jpg)
