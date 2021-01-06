@@ -2,7 +2,9 @@
 layout:     post
 title:      Electronics Lover
 subtitle:   It includes assembling, maintenance, fixing problems for PC, iPhone; 
+
 Rebuild and be familiar with operation system, such as Linux, MacOS and Windows; 
+
 Build firewall for Internet bar to avoid ping flooding.
 date:       2021-01-04
 author:     Shuo Wang
