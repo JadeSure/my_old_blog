@@ -93,3 +93,4 @@ VPCs are easy-to-use AWS network organizers and great tools for organizing your 
 
 EC2 is located in the VPCs.
 
+## What Is S3?
