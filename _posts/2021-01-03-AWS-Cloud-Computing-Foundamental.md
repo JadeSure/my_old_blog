@@ -59,6 +59,8 @@ policies: the permission of document for the templates for specific access right
 
 one Role has many policies.
 
+[Introduction to AWS Identity and Access Management (IAM)](https://www.qwiklabs.com/focuses/15717?parent=catalog)
+
 # Day2 What is Elastic Cloud Computing(EC2)?
 
 A virtualized and abstracted subset of a physical server. It'll have access to storage, memroy and a network surface.
@@ -93,4 +95,16 @@ VPCs are easy-to-use AWS network organizers and great tools for organizing your 
 
 EC2 is located in the VPCs.
 
-## What Is S3?
+## What Is S3(Amazon Simple Storage Service)?
+1. Maintaining backup archives, log files, and disaster recovery images
+
+2. Running analytics on big data at rest
+
+3. Hosting static websites
+
+It is an object storage. For EC2, it is a block storage which divided data into individual blocks whose use is managd by a file system. eg. NTFS exFAT. Allocating space for the files and data that are saved to the underlying device and for providing access whenever the OS needs to read some data.
+
+S3 standard --> S3 IA --> S3 Glacier [Amazon S3 Storage Classes](https://aws.amazon.com/s3/storage-classes/)
+
+
+
