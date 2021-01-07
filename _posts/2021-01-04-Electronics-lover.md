@@ -45,6 +45,11 @@ Replace iphone6s, 6splus screen, battery.
 ![picture19](/img/computers_phones/phone1.JPG)
 ![picture20](/img/computers_phones/phone2.JPG)
 ![picture21](/img/computers_phones/phone3.JPG)
+![picture22](/img/computers_phones/phone4.JPG)
+![picture23](/img/computers_phones/phone5.JPG)
+![picture24](/img/computers_phones/pad1.JPG)
+![picture25](/img/computers_phones/pad2.JPG)
+![picture26](/img/computers_phones/pad3.JPG)
 
 
 ## Rebuild PC system, such Windows, MacOS, Virtual Machine, Linux
