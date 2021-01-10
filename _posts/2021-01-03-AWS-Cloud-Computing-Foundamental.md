@@ -205,8 +205,10 @@ precision and speed with which resources are delivered.
 Route 53 provides morex
 than just basic DNS services. In fact, it focuses on four distinct areas: domain registration, DNS management,
 availability monitoring (health checks), and routing policies (traffic management).
-
+![picture5](/img/AWS/healthcheck.png)
 
 ## CloudFront
 Amazon’s global content delivery network (CDN), can take both speed and accuracy a few steps
 further. 
+![picture6](/img/AWS/CloudFront.png)
+![picture7](/img/AWS/CloudFront2.png)
