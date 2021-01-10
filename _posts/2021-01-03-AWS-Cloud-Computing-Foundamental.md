@@ -54,11 +54,13 @@ Users:
 
 group: many users have same permissions
 
-Roles: **the service in AWS** communicate with other services in AWS e.g. EC2, S3
+Roles: **the service in AWS** communicate with other services in AWS (defines what you can do after you authenticate)e.g. EC2, S3
 
 policies: the permission of document for the templates for specific access rights; How many resources can be accessed.
 
 one Role has many policies.
+
+Profile: defines who you are for authentication
 
 [Introduction to AWS Identity and Access Management (IAM)](https://www.qwiklabs.com/focuses/15717?parent=catalog)
 
@@ -107,6 +109,9 @@ It is an object storage. For EC2, it is a block storage which divided data into 
 
 S3 standard --> S3 IA --> S3 Glacier [Amazon S3 Storage Classes](https://aws.amazon.com/s3/storage-classes/)
 
+Amazon Resource Names(ARN)s uniquely identify AWS resources across all of AWZ. eg. arn:aws:iam::414066325645:role/EC2InstanceProfileRole.
+
+[Introduction to Amazon Simple Storage Service S3](https://www.qwiklabs.com/focuses/15683?parent=catalog)
 ## Virtual Private Network(VPC)
 Amazon’s Virtual Private Cloud service provides the networking layer of EC2. A VPC can exist only within an AWS region. A VPC is a virtual network that
 can contain EC2 instances as well as network resources for other AWS services. By default, every VPC is isolated from all other networks.
