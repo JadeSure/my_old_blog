@@ -216,8 +216,7 @@ availability monitoring (health checks), and routing policies (traffic managemen
 ![picture5](/img/AWS/healthcheck.png)
 
 ## CloudFront
-Amazon’s global content delivery network (CDN), can take both speed and accuracy a few steps
-further. 
+Is is a content delivery web service. It integrates with other AWS products to give developers and businesses an easy way to distribute content to end users with low latency, high data transfer speeds, and no minimum usage commitments. Amazon’s global content delivery network (CDN), can take both speed and accuracy a few steps further. 
 ![picture6](/img/AWS/CloudFront.png)
 ![picture7](/img/AWS/CloudFront2.png)
 
