@@ -111,6 +111,8 @@ S3 standard --> S3 IA --> S3 Glacier [Amazon S3 Storage Classes](https://aws.ama
 
 Amazon Resource Names(ARN)s uniquely identify AWS resources across all of AWZ. eg. arn:aws:iam::414066325645:role/EC2InstanceProfileRole.
 
+AWS Policy generator: AWS policies use the JSON format, and are used to configure granular permissions for AWS services. Principal: EC2 Role ARN; Amazon Resource Name(ARN): the Bucket ARN that you previously copied(/*: restriction for all files ).
+
 [Introduction to Amazon Simple Storage Service S3](https://www.qwiklabs.com/focuses/15683?parent=catalog)
 ## Virtual Private Network(VPC)
 Amazon’s Virtual Private Cloud service provides the networking layer of EC2. A VPC can exist only within an AWS region. A VPC is a virtual network that
@@ -138,6 +140,7 @@ A subnet can exist within only one availability zone (AZ, or zone for short), wh
 CloudTrail logs both API and non-API actions. Non-API actions include logging into the management console. API actions include launching an instance, creating a bucket in S3, and creating a virtual private cloud (VPC).
 These are API events regardless of whether they’re performed in the AWS management console, with the AWS
 Command Line Interface, with an AWS SDK, or by another AWS service. CloudTrail classifies events into management events and data events.
+
 ### Management Events
 Management events include operations that a principal executes (or attempts to execute) against an AWS
 resource. AWS also calls management events control plane operations.
@@ -217,3 +220,8 @@ Amazon’s global content delivery network (CDN), can take both speed and accura
 further. 
 ![picture6](/img/AWS/CloudFront.png)
 ![picture7](/img/AWS/CloudFront2.png)
+
+
+## AWS Lambda
+It is a compute service that runs your code in response to events and automatically manages the compute resources for you. eg. image upload, in-app activity, website click, or output from a connected device.
+![quick lab](https://www.qwiklabs.com/focuses/15682?parent=catalog)
