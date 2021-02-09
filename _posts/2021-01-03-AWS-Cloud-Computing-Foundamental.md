@@ -224,3 +224,6 @@ Is is a content delivery web service. It integrates with other AWS products to g
 ## AWS Lambda
 It is a compute service that runs your code in response to events and automatically manages the compute resources for you. eg. image upload, in-app activity, website click, or output from a connected device.
 [quick lab](https://www.qwiklabs.com/focuses/15682?parent=catalog)
+
+## What is ARN?
+ARN: Amazon Resouce Name (unique identity)
