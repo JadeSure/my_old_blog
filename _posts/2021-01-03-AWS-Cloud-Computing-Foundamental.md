@@ -251,3 +251,14 @@ Key Value Pairs == Fields
 ![picture8](/img/AWS/RDS2.jpg)
 ![picture9](/img/AWS/RDS1.png)
 M: master; S: Slaver; R can be used as DB backups, which is asnchronous and can also be used in read workloads.
+
+### DynamoDB
+It is a fast and flexible NoSQL database, which is a fully managed database and supports both document and key-value data models, suitable for mobile, web, gaming, at-tech, IOT. Stored on SSD storage with spread across 3 geographically distinct data centers.  
+Eventual Consistent Reads: fast read with little latency.
+Strongly Consistent Reads: reflects all writes that received a successful response piror to the read.(higher consistency with lower performance).
+
+### RedShift
+Amazon Redshift is a fast and powerful, fully managed, petabyte-scale data warehouse service in the cloud.(OLAP)  
+ATTENTION: OLAP & OLTP have no relationship with NoSQL.  
+Redshift has Multi-Node including one master node(leader node: manges client connections and receives queries) and many compute noded/slaver worker(store data and perform queries and computations.)  
+Firstly, RedShift is columnar data storage, which organizes the data by column. Column-based systems are ideal for data warehousing and analytics. Data is stored sequentially on the storage media, column-based sstems require far fewer I/Os, greatly improving query performance. Secondly, It has provide significant compression in the same data type in the columns, which means Amazon Redshift automatically samples your data and selects the most appropriate compression scheme. Thirdly, Massively Parallel Processing(MPP): automatically distributes data and query load across all ndes. easily to add nodes and maintian fast query performance.
