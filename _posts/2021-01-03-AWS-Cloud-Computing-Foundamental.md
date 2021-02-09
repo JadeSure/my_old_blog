@@ -226,7 +226,7 @@ It is a compute service that runs your code in response to events and automatica
 [quick lab](https://www.qwiklabs.com/focuses/15682?parent=catalog)
 
 ## Database on AWS
-RDS - back up, multi-AZ(for disaster recovery) & read replicas(for scaling)  
+RDS - back up, multi-AZ(for disaster recovery) & read replicas(for scaling and fast reading)  
 DynamoDB (NoSQL)  
 RedShift (OLAP: Online Analytical Processing, for analysis. OLTP: Online Transaction Processing, for data save)  
 Elasticache: quickly access in the RAM for two memory caching engines: Memcached and Redis  
@@ -247,4 +247,7 @@ Collection == Table
 Document == Row  
 Key Value Pairs == Fields  
 
-
+### RDS Structure
+![picture8](/img/AWS/RDS2.jpg)
+![picture9](/img/AWS/RDS1.png)
+M: master; S: Slaver; R can be used as DB backups, which is asnchronous and can also be used in read workloads.
