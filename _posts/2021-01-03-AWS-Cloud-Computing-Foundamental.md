@@ -225,5 +225,26 @@ Is is a content delivery web service. It integrates with other AWS products to g
 It is a compute service that runs your code in response to events and automatically manages the compute resources for you. eg. image upload, in-app activity, website click, or output from a connected device.
 [quick lab](https://www.qwiklabs.com/focuses/15682?parent=catalog)
 
-## What is ARN?
-ARN: Amazon Resouce Name (unique identity)
+## Database on AWS
+RDS - back up, multi-AZ(for disaster recovery) & read replicas(for scaling)  
+DynamoDB (NoSQL)  
+RedShift (OLAP: Online Analytical Processing, for analysis. OLTP: Online Transaction Processing, for data save)  
+Elasticache: quickly access in the RAM for two memory caching engines: Memcached and Redis  
+Aurora: for serverless RDBMS  
+
+### AWS RDS (Relational Database)
+RDBMS: SQL Server, Oracle, MySQL, PostgreSQL, Aurora, MariaDB  
+Automated Backups: backup(in S3) in a sepcific time with transaction logs to restore a database. The automated backup will be deleted when the RDS instance is stopped.  
+Snapshots: mannually backup, which can be keep after you delete the original RDS instance.
+### What is ARN?
+ARN: Amazon Resouce Name (unique identity), which will be used for encrypted database.
+
+### The different between Multi-AZ Deployments with Read Replicas
+![picture8](/img/db/database1.png)
+
+### Comparison with SQL and NoSQL
+Collection == Table  
+Document == Row  
+Key Value Pairs == Fields  
+
+
