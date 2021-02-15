@@ -80,7 +80,9 @@ AWS Policy generator: AWS policies use the JSON format, and are used to configur
 
 ## Day4 What Is Virtual Private Clouds (VPCs)?
 VPCs are easy-to-use AWS network organizers and great tools for organizing your infrastructure, which can be easy to isolate the instances in one VPC from whatever else you have running. eg. one VPC for application development, another for beta testing and a third for production.  
-EC2 is located in the VPCs.
+EC2 is located in the VPCs.  
+VPC can logically isolated section of the Amazon Web Services(AWS) Cloud where you can launch AWS resources in a virtual network that you define. You have complete control over your virtual networking environment, including selection of **Your own IP address range**, **creation of subnets**, and **configuration of route tables** and **network gateways**
+[Build a customer VPC](https://cidr.xyz/)
 
 ## Virtual Private Network(VPC)
 Amazon’s Virtual Private Cloud service provides the networking layer of EC2. A VPC can exist only within an AWS region. A VPC is a virtual network that
@@ -102,11 +104,23 @@ A subnet can exist within only one availability zone (AZ, or zone for short), wh
 Network Address Translation (NAT) gateway to enable instances in a **private subnet** to connect to the internet or other AWS services, but prevent the internet from initiating a connection with those instances.  
 step1 It must specify the public subnet in which the NAT gateway should reside. For more information about public and private subnets, see Subnet routing.  
 step2 It must also specify an Elastic IP address to associate with the NAT gateway when you create it. The Elastic IP address cannot be changed after you associate it with the NAT Gateway.  
-step3 After you've created a NAT gateway, you must update the route table associated with one or more of your **private subnets** to point internet-bound traffic to the NAT gateway. This enables instances in your private subnets to communicate with the internet.
+step3 After you've created a NAT gateway, you must update the route table associated with one or more of your **private subnets** to point internet-bound traffic to the NAT gateway. This enables instances in your private subnets to communicate with the internet. [Details](https://blog.csdn.net/Ahri_J/article/details/105348678#:~:text=NAT%20Gateway%EF%BC%88%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2,%E8%AE%BF%E9%97%AE%EF%BC%8C%E6%8F%90%E9%AB%98%E4%BA%86%E5%AE%89%E5%85%A8%E6%80%A7)
 ![picture11](/img/AWS/NATgateway.png)
 
+## Internal IP range
+10.0.0.0 - 10.255.255.255(10/8 prefix)  
+172.16.0.0 - 172.31.255.255 (172.16/12 prefix)  
+192.168.0.0 - 192.168.255.255 (192.168/16 prefix)
 
-## CloudTrail and Events
+## VPC Peering
+Allow one VPC connect with another one via a direct network route using private IP addresses.  
+It can be in the same AWS account or other account.  
+Peering is a star configuration. No transitive peering!
+
+## Network Access Control Lists (Network ACL)
+A network access control list (ACL) is an optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets. You might set up network ACLs with rules similar to your security groups in order to add an additional layer of security to your VPC. [Details](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html)
+
+## Day4 CloudTrail and Events
 CloudTrail logs both API and non-API actions. Non-API actions include logging into the management console. API actions include launching an instance, creating a bucket in S3, and creating a virtual private cloud (VPC).
 These are API events regardless of whether they’re performed in the AWS management console, with the AWS
 Command Line Interface, with an AWS SDK, or by another AWS service. CloudTrail classifies events into management events and data events.
