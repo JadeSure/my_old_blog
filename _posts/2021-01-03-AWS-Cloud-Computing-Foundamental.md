@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      AWS Cloud Computing Foundamental
-subtitle:   AWS Identity and Access Management(IAM), Elastic Compute Cloud(EC2)
+subtitle:   AWS Identity and Access Management(IAM), Elastic Compute Cloud(EC2), S3, VPC, NAT Gateway, NAT Internet
 date:       2021-01-23
 author:     Shuo Wang
 header-img: img/post-bg-awslogo.jpg
@@ -33,108 +33,78 @@ You can enable identity federation to allow existing users in your enterprise to
 ---
 
 ## My learned
-
-Availability Zones (AZs): physical data center;
-
-Regions: server location in different cities; (one region has many AZs)
-
-Edge Locations: for higher density users, which loads the high frequency stuff into memory to make a lower latency, fast response and decrease system burden.
-
-Regional Edge Caches: for lower access things but in different regions, which provides a higher and faster access.
-
-one AZ has many Data Center
-
-one Region has many AZ(Availability Zone) (at least 2)
-
-each AZ is isolated with each other but closer with each other combined with lower latency.
-
-AWS AMI:
-
-Users:
-
-group: many users have same permissions
-
-Roles: **the service in AWS** communicate with other services in AWS (defines what you can do after you authenticate)e.g. EC2, S3
-
-policies: the permission of document for the templates for specific access rights; How many resources can be accessed.
-
-one Role has many policies.
-
-Profile: defines who you are for authentication
-
+Availability Zones (AZs): physical data center;  
+Regions: server location in different cities; (one region has many AZs)  
+Edge Locations: for higher density users, which loads the high frequency stuff into memory to make a lower latency, fast response and decrease system burden.  
+Regional Edge Caches: for lower access things but in different regions, which provides a higher and faster access.  
+one AZ has many Data Center  
+one Region has many AZ(Availability Zone) (at least 2)  
+each AZ is isolated with each other but closer with each other combined with lower latency.  
+AWS AMI:  
+Users: personal accessibility  
+group: many users have same permissions  
+Roles: **the service in AWS** communicate with other services in AWS (defines what you can do after you authenticate)e.g. EC2, S3  
+policies: the permission of document for the templates for specific access rights; How many resources can be accessed.  
+one Role has many policies.  
+Profile: defines who you are for authentication  
 [Introduction to AWS Identity and Access Management (IAM)](https://www.qwiklabs.com/focuses/15717?parent=catalog)
 
 # Day2 What is Elastic Cloud Computing(EC2)?
-
-A virtualized and abstracted subset of a physical server. It'll have access to storage, memroy and a network surface.
-
-After you configure your instance's operating system, the OS is defined by the Amazon Machine Image(AMI) you choose, and the hardware follows the instance type.
-
-Amazon Quick Start AMIs: include various releases of Linux or Windows Server OSs and some specialty images for performing common operations.
-
-AWS Marketplace AMIs: from the AWS Marketplace are official, production-ready images provided and supported by industry vendors like SAP and Cisco.
-
+A virtualized and abstracted subset of a physical server. It'll have access to storage, memroy and a network surface.  
+After you configure your instance's operating system, the OS is defined by the Amazon Machine Image(AMI) you choose, and the hardware follows the instance type.  
+Amazon Quick Start AMIs: include various releases of Linux or Windows Server OSs and some specialty images for performing common operations.  
+AWS Marketplace AMIs: from the AWS Marketplace are official, production-ready images provided and supported by industry vendors like SAP and Cisco.  
 Community AMIs: these images are AMIs created and maintained by independent vendors and are usually built to meet a specific need. This is a good catalog to search if you're palnning an application built on a custom combination of software resources.
 
 ## Instance Types
-Instance Type Family:
-
-Accelerated computing: P3, P2, G3, F1 (machine learning, Neural network)
-
-based on cost for the instance types:
-
-**On-Demand Instances:** when you use, you cost; before have a higher volumn to use it. e.g. Black Friday. (按需)
-
-**Reserved Instances:** a contract that server one year(maybe). it becomes cheaper with longer development. (预留)
-
-**Spot Instances:** during peak computing level, it needs more money. (竞价)
-
-**Scheduled Reserved Instances:** periodically use server. (计划的预留)
-
+Instance Type Family:  
+Accelerated computing: P3, P2, G3, F1 (machine learning, Neural network)  
+based on cost for the instance types:  
+**On-Demand Instances:** when you use, you cost; before have a higher volumn to use it. e.g. Black Friday. (按需)  
+**Reserved Instances:** a contract that server one year(maybe). it becomes cheaper with longer development. (预留)  
+**Spot Instances:** during peak computing level, it needs more money. (竞价)  
+**Scheduled Reserved Instances:** periodically use server. (计划的预留)  
 **Dedicated Instances & Dedicated Hosts:** VIP~!(专用) 
 
-## What Is Virtual Private Clouds (VPCs)?
-VPCs are easy-to-use AWS network organizers and great tools for organizing your infrastructure, which can be easy to isolate the instances in one VPC from whatever else you have running. eg. one VPC for application development, another for beta testing and a third for production.
 
+
+# Day3 What Is S3(Amazon Simple Storage Service)?
+1. Maintaining backup archives, log files, and disaster recovery images  
+2. Running analytics on big data at rest  
+3. Hosting static websites  
+It is an object storage. For EC2, it is a block storage which divided data into individual blocks whose use is managd by a file system. eg. NTFS exFAT. Allocating space for the files and data that are saved to the underlying device and for providing access whenever the OS needs to read some data.  
+S3 standard --> S3 IA --> S3 Glacier [Amazon S3 Storage Classes](https://aws.amazon.com/s3/storage-classes/)  
+Amazon Resource Names(ARN)s uniquely identify AWS resources across all of AWZ. eg. arn:aws:iam::414066325645:role/EC2InstanceProfileRole.  
+AWS Policy generator: AWS policies use the JSON format, and are used to configure granular permissions for AWS services. Principal: EC2 Role ARN; Amazon Resource Name(ARN): the Bucket ARN that you previously copied(/*: restriction for all files ).  
+[Introduction to Amazon Simple Storage Service S3](https://www.qwiklabs.com/focuses/15683?parent=catalog)
+
+## Day4 What Is Virtual Private Clouds (VPCs)?
+VPCs are easy-to-use AWS network organizers and great tools for organizing your infrastructure, which can be easy to isolate the instances in one VPC from whatever else you have running. eg. one VPC for application development, another for beta testing and a third for production.  
 EC2 is located in the VPCs.
 
-## What Is S3(Amazon Simple Storage Service)?
-1. Maintaining backup archives, log files, and disaster recovery images
-
-2. Running analytics on big data at rest
-
-3. Hosting static websites
-
-It is an object storage. For EC2, it is a block storage which divided data into individual blocks whose use is managd by a file system. eg. NTFS exFAT. Allocating space for the files and data that are saved to the underlying device and for providing access whenever the OS needs to read some data.
-
-S3 standard --> S3 IA --> S3 Glacier [Amazon S3 Storage Classes](https://aws.amazon.com/s3/storage-classes/)
-
-Amazon Resource Names(ARN)s uniquely identify AWS resources across all of AWZ. eg. arn:aws:iam::414066325645:role/EC2InstanceProfileRole.
-
-AWS Policy generator: AWS policies use the JSON format, and are used to configure granular permissions for AWS services. Principal: EC2 Role ARN; Amazon Resource Name(ARN): the Bucket ARN that you previously copied(/*: restriction for all files ).
-
-[Introduction to Amazon Simple Storage Service S3](https://www.qwiklabs.com/focuses/15683?parent=catalog)
 ## Virtual Private Network(VPC)
 Amazon’s Virtual Private Cloud service provides the networking layer of EC2. A VPC can exist only within an AWS region. A VPC is a virtual network that
-can contain EC2 instances as well as network resources for other AWS services. By default, every VPC is isolated from all other networks.
-
+can contain EC2 instances as well as network resources for other AWS services. By default, every VPC is isolated from all other networks.  
 A VPC can exist only within an AWS region. When you create a VPC in a region, it won’t show up in any other regions. You can have multiple VPCs in your account and create multiple VPCs in a single region. To keep things simple, I’ll start by assuming only one VPC in one region. Later, I’ll cover considerations for multiple VPCs.
-## VPC CIDR Blocks
+## VPC CIDR(Classless Inter-Domain Routing) Blocks
 a VPC consists of at least one range of contiguous IP addresses. This address range is represented as a Classless interdomain routing (CIDR) block. You must assign a primary CIDR block when creating a VPC. For example, the CIDR 172.16.0.0/16 includes all addresses from 172.16.0.0 to 172.16.255.255—a total of 65,536 addresses!
 ## Secondary CIDR Blocks
 You may optionally specify secondary CIDR blocks for a VPC after you’ve created it. These blocks must come from either the same address range as the primary or a publicly routable range, but they must not overlap with the primary or other secondary blocks. For example, if the VPC’s primary CIDR is 172.16.0.0/16, you may specify a secondary CIDR of 172.17.0.0/16. But you may not specify 192.168.0.0/16.
 ## Subnet and Elastic Network Interface
-A subnet is a logical container within a VPC that holds your EC2 instances. A subnet lets you isolate instances from each other, control how traffic flows to and from your instances, and lets you organize them by function. For example, you can create one subnet for public web servers that need to be accessible from the Internet and create another subnet for database servers that only the web instances can access. In concept, subnets are similar to virtual LANs (VLANs) in a traditional network.
-
-Every instance must exist within a subnet. You’ll often hear the phrase “launch an instance into a subnet.” Once you create an instance in a subnet, you can’t move it. You can, however, terminate it and create a different instance in another subnet. By extension, this also means you can’t move an instance from one VPC to another.
-
-AWS reserves the first four and last IP addresses in every subnet. You can’t assign these addresses to any instances. Assuming a subnet CIDR of 172.16.100.0/24, the following addresses would be reserved:
-
-• 172.16.100.0–172.16.100.3
-
-• 172.16.100.255
-
+A subnet is a logical container within a VPC that holds your EC2 instances. A subnet lets you isolate instances from each other, control how traffic flows to and from your instances, and lets you organize them by function. For example, you can create one subnet for public web servers that need to be accessible from the Internet and create another subnet for database servers that only the web instances can access. In concept, subnets are similar to virtual LANs (VLANs) in a traditional network.  
+Every instance must exist within a subnet. You’ll often hear the phrase “launch an instance into a subnet.” Once you create an instance in a subnet, you can’t move it. You can, however, terminate it and create a different instance in another subnet. By extension, this also means you can’t move an instance from one VPC to another.  
+AWS reserves the first four and last IP addresses in every subnet. You can’t assign these addresses to any instances. Assuming a subnet CIDR of 172.16.100.0/24, the following addresses would be reserved:  
+• 172.16.100.0–172.16.100.3  
+• 172.16.100.255  
 A subnet can exist within only one availability zone (AZ, or zone for short), which is roughly analogous to a relatively small geographic location such as a data center.
+
+## NAT(Network Address Translation) Gateways
+Network Address Translation (NAT) gateway to enable instances in a **private subnet** to connect to the internet or other AWS services, but prevent the internet from initiating a connection with those instances.  
+step1 It must specify the public subnet in which the NAT gateway should reside. For more information about public and private subnets, see Subnet routing.  
+step2 It must also specify an Elastic IP address to associate with the NAT gateway when you create it. The Elastic IP address cannot be changed after you associate it with the NAT Gateway.  
+step3 After you've created a NAT gateway, you must update the route table associated with one or more of your **private subnets** to point internet-bound traffic to the NAT gateway. This enables instances in your private subnets to communicate with the internet.
+![picture11](/img/AWS/NATgateway.png)
+
 
 ## CloudTrail and Events
 CloudTrail logs both API and non-API actions. Non-API actions include logging into the management console. API actions include launching an instance, creating a bucket in S3, and creating a virtual private cloud (VPC).
