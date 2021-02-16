@@ -78,7 +78,7 @@ Amazon Resource Names(ARN)s uniquely identify AWS resources across all of AWZ. e
 AWS Policy generator: AWS policies use the JSON format, and are used to configure granular permissions for AWS services. Principal: EC2 Role ARN; Amazon Resource Name(ARN): the Bucket ARN that you previously copied(/*: restriction for all files ).  
 [Introduction to Amazon Simple Storage Service S3](https://www.qwiklabs.com/focuses/15683?parent=catalog)
 
-## Day4 What Is Virtual Private Clouds (VPCs)?
+# Day4 What Is Virtual Private Clouds (VPCs)?
 VPCs are easy-to-use AWS network organizers and great tools for organizing your infrastructure, which can be easy to isolate the instances in one VPC from whatever else you have running. eg. one VPC for application development, another for beta testing and a third for production.  
 EC2 is located in the VPCs.  
 VPC can logically isolated section of the Amazon Web Services(AWS) Cloud where you can launch AWS resources in a virtual network that you define. You have complete control over your virtual networking environment, including selection of **Your own IP address range**, **creation of subnets**, and **configuration of route tables** and **network gateways**
@@ -107,6 +107,10 @@ step2 It must also specify an Elastic IP address to associate with the NAT gatew
 step3 After you've created a NAT gateway, you must update the route table associated with one or more of your **private subnets** to point internet-bound traffic to the NAT gateway. This enables instances in your private subnets to communicate with the internet. [Details](https://blog.csdn.net/Ahri_J/article/details/105348678#:~:text=NAT%20Gateway%EF%BC%88%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2,%E8%AE%BF%E9%97%AE%EF%BC%8C%E6%8F%90%E9%AB%98%E4%BA%86%E5%AE%89%E5%85%A8%E6%80%A7)
 ![picture11](/img/AWS/NATgateway.png)
 
+## NAT Instance
+NAT Instance: package forwarding. Compared with NAT Gateway, it is more flexible to do load balancer, not convenient.
+
+
 ## Internal IP range
 10.0.0.0 - 10.255.255.255(10/8 prefix)  
 172.16.0.0 - 172.31.255.255 (172.16/12 prefix)  
@@ -118,9 +122,17 @@ It can be in the same AWS account or other account.
 Peering is a star configuration. No transitive peering!
 
 ## Network Access Control Lists (Network ACL)
-A network access control list (ACL) is an optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets. You might set up network ACLs with rules similar to your security groups in order to add an additional layer of security to your VPC. [Details](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html)
+A network access control list (ACL) is an optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets. You might set up network ACLs with rules similar to your security groups in order to add an additional layer of security to your VPC. [Details](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html)  
+#### Remember points:
+1. Network ACLs have **separate** inbound and outbound rules, and each rule can either **allow or deny** traffic.  
+2. The VPC automatically comes **a default network ACL** and by default it allows all **outbound** and **inbound** traffic.  
+3. For creating custom network ACLs. By default, each custom network ACL denies all inbound and outbound traffic until you add rules.  
+4. Each subnet in the VPC **must be** associated with network ACL. If you do not explicity associate a subnet with a network ACL, the subnet is **automatically associated with the default network ACL**.  
+5. A network ACL can apply in multiple subnets; However, a subnet can be associated with only one network ACL at a time. When you associate a network ACL with a subnet, the previous association is removed.  
+6. The lower rule number has the higher priority.  
+7. Network ACLs are stateless; responses to allowed inbound traffic are subject to the rules for outbound traffic.
 
-## Day4 CloudTrail and Events
+# Day5 CloudTrail and Events
 CloudTrail logs both API and non-API actions. Non-API actions include logging into the management console. API actions include launching an instance, creating a bucket in S3, and creating a virtual private cloud (VPC).
 These are API events regardless of whether they’re performed in the AWS management console, with the AWS
 Command Line Interface, with an AWS SDK, or by another AWS service. CloudTrail classifies events into management events and data events.
@@ -157,7 +169,7 @@ value of those metrics. CloudWatch Logs lets you collect, store, view, and searc
 sources. You can also extract custom metrics from logs, such as the number of errors logged by an application or the
 number of bytes served by a web server.
 ![picture1](/img/AWS/CloudWatch.png)
-## AWS Config
+# Day6 AWS Config
 AWS Config tracks how your AWS resources are configured at a point in time. Resources are entities that you
 create and manage using the management console, AWS CLI, or AWS SDKs. Think of AWS Config as a time
 machine. You can use it to see what a resource configuration looked like at some point in the past versus what it
@@ -205,44 +217,56 @@ Is is a content delivery web service. It integrates with other AWS products to g
 ![picture7](/img/AWS/CloudFront2.png)
 
 
-## AWS Lambda
+# Day7 AWS Lambda
 It is a compute service that runs your code in response to events and automatically manages the compute resources for you. eg. image upload, in-app activity, website click, or output from a connected device.
 [quick lab](https://www.qwiklabs.com/focuses/15682?parent=catalog)
 
-## Database on AWS
+# Day8 Database on AWS
 RDS - back up, multi-AZ(for disaster recovery) & read replicas(for scaling and fast reading)  
 DynamoDB (NoSQL)  
 RedShift (OLAP: Online Analytical Processing, for analysis. OLTP: Online Transaction Processing, for data save)  
 Elasticache: quickly access in the RAM for two memory caching engines: Memcached and Redis  
 Aurora: for serverless RDBMS  
 
-### AWS RDS (Relational Database)
+## AWS RDS (Relational Database)
 RDBMS: SQL Server, Oracle, MySQL, PostgreSQL, Aurora, MariaDB  
 Automated Backups: backup(in S3) in a sepcific time with transaction logs to restore a database. The automated backup will be deleted when the RDS instance is stopped.  
 Snapshots: mannually backup, which can be keep after you delete the original RDS instance.
-### What is ARN?
+## What is ARN?
 ARN: Amazon Resouce Name (unique identity), which will be used for encrypted database.
 
-### The different between Multi-AZ Deployments with Read Replicas
+## The different between Multi-AZ Deployments with Read Replicas
 ![picture8](/img/db/database1.png)
 
-### Comparison with SQL and NoSQL
+## Comparison with SQL and NoSQL
 Collection == Table  
 Document == Row  
 Key Value Pairs == Fields  
 
-### RDS Structure
+## RDS Structure
 ![picture8](/img/AWS/RDS2.jpg)
 ![picture9](/img/AWS/RDS1.png)
 M: master; S: Slaver; R can be used as DB backups, which is asnchronous and can also be used in read workloads.
 
-### DynamoDB
+## DynamoDB
 It is a fast and flexible NoSQL database, which is a fully managed database and supports both document and key-value data models, suitable for mobile, web, gaming, at-tech, IOT. Stored on SSD storage with spread across 3 geographically distinct data centers.  
 Eventual Consistent Reads: fast read with little latency.
 Strongly Consistent Reads: reflects all writes that received a successful response piror to the read.(higher consistency with lower performance).
 
-### RedShift
+## RedShift
 Amazon Redshift is a fast and powerful, fully managed, petabyte-scale data warehouse service in the cloud.(OLAP)  
 ATTENTION: OLAP & OLTP have no relationship with NoSQL.  
 Redshift has Multi-Node including one master node(leader node: manges client connections and receives queries) and many compute noded/slaver worker(store data and perform queries and computations.)  
 Firstly, RedShift is columnar data storage, which organizes the data by column. Column-based systems are ideal for data warehousing and analytics. Data is stored sequentially on the storage media, column-based sstems require far fewer I/Os, greatly improving query performance. Secondly, It has provide significant compression in the same data type in the columns, which means Amazon Redshift automatically samples your data and selects the most appropriate compression scheme. Thirdly, Massively Parallel Processing(MPP): automatically distributes data and query load across all ndes. easily to add nodes and maintian fast query performance.
+
+## AWS Aurora
+MySQL-compatible that combines the speed and availability of high-end commercial databases, which performance 5 times better than MySQL while delivering similar performance and availability.
+
+## Elasticache
+Elasticache is a web service that makes it easy to deploy, operate, and scale an in-memory cache in the cloud, which allows you to retrieve information from fast, managed, in-memory caches, instead of relying entirely on slower disk-based databases.  
+1. Memcached  
+Elasticache is protocol compliant with Memcached, so popular tools that you use today with existing Memcached environments will work seamlessly with the service.  
+
+2. Redis  
+A popular open-source in-memory key-value store that supports data structures, such as sets and lists. Elasticache supports master/slave replication and multi-AZ which can be used to achieve cross AXZ redundancy.  
+Aurora storage is self-healing. Data blocks and disks are continuously scanned for errors and repaired automatically.
