@@ -49,16 +49,40 @@ NULL_IF = ('NULL');
 4. Put the file into stage
 `put file:///Users/user/Downloads/crime2.csv @"DE_JIANGREN_DEMO"."PUBLIC"."MY_CSV_STAGE" auto_com
                                                  press=true;`
+5. Create Schema in the database first to recieve data from crime2.csv
+```python
+create or replace TABLE CRIME_LITE (
+INCIDENT_NUMBER VARCHAR(15) NOT NULL,
+OFFENSE_CODE VARCHAR(10) NOT NULL,
+OFFENSE_CODE_GROUP VARCHAR(255) NOT NULL,
+OFFENSE_DESCRIPTION VARCHAR(255),
+DISTRICT VARCHAR(10),
+SHOOTING VARCHAR(2),
+OCCURRED_ON_DATE TIMESTAMP_NTZ(9) NOT NULL,
+YEAR NUMBER(38,0) NOT NULL,
+MONTH NUMBER(38,0) NOT NULL,
+DAY_OF_WEEK VARCHAR(20) NOT NULL,
+HOUR NUMBER(38,0) NOT NULL,
+UCR_PART VARCHAR(10),
+STREET VARCHAR(255)
+);
+```  
                                                  
-5. Copy data into table
+6. Copy data into table
 `alter warehouse &mywarehouse resume;`: if the system iterrupt, whether we need to resume the process.
-
 ```python
 copy into CRIME_LITE
 from @my_csv_stage/crime2.csv.gz
 file_format = (format_name = CRIME_DEMO1)
 on_error = 'skip_file';
-```
+```  
+Then, it will show a success message  
++-----------------------------+--------+-------------+-------------+-------------+-------------+-------------+------------------+-----------------------+-------------------------+
+| file                        | status | rows_parsed | rows_loaded | error_limit | errors_seen | first_error | first_error_line | first_error_character | first_error_column_name |
+|-----------------------------+--------+-------------+-------------+-------------+-------------+-------------+------------------+-----------------------+-------------------------|
+| my_csv_stage1/crime2.csv.gz | LOADED |      327820 |      327820 |           1 |           0 | NULL        |             NULL |                  NULL | NULL                    |
++-----------------------------+--------+-------------+-------------+-------------+-------------+-------------+------------------+-----------------------+-------------------------+
+1 Row(s) produced. Time Elapsed: 4.725s
 
 
 
