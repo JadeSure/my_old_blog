@@ -77,7 +77,7 @@ file_format = (format_name = CRIME_DEMO1)
 on_error = 'skip_file';
 ```  
 Then, it will show a success message with loaded process.
-![picture1](img/post-bg-snowflake.png)
+![picture1](/img/post-bg-snowflake.png)
 
 
 
