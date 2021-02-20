@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      RDBMS Database with Snowflake
-subtitle:   This blog includes connect snowflake by Open Command Line(CLI) in Mac, and includes some basic SQL knowledge, such as create table(DB), left join, right join, inner join, group by, view, and index, and also some high level windows analytic function, such as dense_rank, partion by, lead, lag and so forth. 
+subtitle:   This blog includes connect snowflake by Open Command Line(CLI) in Mac, and includes some high level windows analytic function, such as dense_rank, partion by, lead, lag and so forth. 
 date:       2021-02-20
 author:     Shuo Wang
 header-img: img/post-bg-snowflake.jpg
@@ -78,6 +78,74 @@ on_error = 'skip_file';
 ```  
 Then, it will show a success message with loaded process.
 ![picture1](/img/snowflake-file-sucess.png)
+
+
+## SQL for Table vs View
+Table: a table is a collection of related data held in a structured format within a database. It consists of columns, and rows.  
+View: a view is a virtual table based on the result-set of an SQL statement.  
+View can add one more layer for security that avoid opertation in the deep level(real database) directly.  
+view can control permission.  
+```python
+Create view join_demo.order_validation as [select-statement]
+```  
+Next time, if you want to call this view: `select * from jpin_demo.order_validation`
+
+## SQL for Index
+An index is a data structure that improves the speed of data retrieval on a table at the cost of additional writes and storage to maintain it.  
+It has the primary index and secondary index. By default, primary index will base on the first column --> hashcode    
+eg. create index address on customer_new(Address);
+
+
+## Windows Function
+select ...
+### RANK
+DENSE_RANK: no gap in the index, same level index shows the same index value. eg. 1,2,2,2,3,4  
+RANK: a gap between same level index and the next one. eg. 1,2,2,2,5,6  
+ROW_NUMBER: won't consider same level index, just in order. eg. 1,2,3,4,5,6  
+syntax: **DENSE_RANK/RANK/ROW_NUMBER OVER(order by order_id) AS 'dense_rank/rank/row_number'** from tabel.
+
+### PARTITIN BY
+Based one columns attributes to make a partition.  
+syntax: DENSE_RANK/RANK/ROW_NUMBER **OVER(PARTITION BY COL1, order by order_id)** as partition.  
+
+### LEAD & LAG
+This function can judge the next/previous transaction for this customer (column attributes), which can be used to calculate the gap between two transactions.  
+syntax:  
+**LEAD(order_date, 1)** OVER (PARTITION BY First_Name, ORDER BY order_date) as next_order_date ps: 1 means the next one gap.  
+**LAG(order_date, 1)** OVER (PARTITION BY First_Name, ORDER BY order_date) as prev_order_date : 1 means the previous one gap.
+
+### Cumulative Sum & Moving Average (SQL Frame Clause)
+sum value and calculate the average value.  
+syntax for preceding (roll back):  
+**SUM(CNT) OVER (ORDER BY ROWS_NAME ROWS BETWEEN 27 PRECEDING AND CURRENT ROW)** as CUM_CNT  (totally 28)   
+**AVG(CNT) OVER (ORDER BY ROWS_NAME ROWS BETWEEN 27 PRECEDING AND CURRENT ROW)** as CUM_CNT  (totally 28)   
+syntax for following (next turn):  
+**SUM(CNT) OVER (ORDER BY ROWS_NAME ROWS BETWEEN CURRENT ROW AND 27 FOLLOWING)** as CUM_CNT  (totally 28)    
+**AVG(CNT) OVER (ORDER BY ROWS_NAME ROWS BETWEEN CURRENT ROW AND 27 FOLLOWING)** as CUM_CNT  (totally 28)
+
+eg. AVG(CNT) OVER (ORDER BY [ROWS_NAME] ROWS BETWEEN CURRENT 27 PRECEDING AND 27 FOLLOWING) as CUM_CNT 
+
+Advanced syntax: SQL NTILE & Common Table Expression(CTE) Omit Now! :)
+
+## Data Profiling?
+Data retrieval, such as how many columns, empty one...
+
+SQL fundamental exercise file(join, groupby, having...):
+SQL Windows function file:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
