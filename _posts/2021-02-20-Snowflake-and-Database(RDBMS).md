@@ -97,7 +97,7 @@ eg. create index address on customer_new(Address);
 
 
 ## Windows Function
-select ...
+select [windows functino location] from ...
 ### RANK
 DENSE_RANK: no gap in the index, same level index shows the same index value. eg. 1,2,2,2,3,4  
 RANK: a gap between same level index and the next one. eg. 1,2,2,2,5,6  
