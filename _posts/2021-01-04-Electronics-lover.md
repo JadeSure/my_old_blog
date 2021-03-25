@@ -18,7 +18,7 @@ tags:
 ---
 
 
-# Personal Profile <a href="/my_CV/Shuo_Wang_IT_infrastructure.pdf" download="Shuo_Wang_IT_infrastructure.pdf">*DOWNLOAD MY CV*</a>
+# Personal Profile <a href="/my_CV/Shuo_Wang_IT_infrastructure.pdf" download="Shuo_Wang_CV.pdf">*DOWNLOAD MY CV*</a>
 
 --
 I love electronic products very much, have great enthusiasm and interest in various electronic devices, and be proficient
