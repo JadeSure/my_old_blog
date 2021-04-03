@@ -31,7 +31,7 @@ for example, `snowsql -a ea34666.ap-southeast-2 -u tremendousure -w COMPUTE_WH -
 `CREATE STAGE "DE_DEMO"."PUBLIC"."MY_CSV_STAGE"`  
 3. Create FIle Format
 ```python
-CREATE OR Replace FILE FORMAT "DE_DEMO"."PUBLIC".CRIME_DEMO1
+CREATE OR Replace FILE FORMAT "DE_DEMO"."PUBLIC".CRIME_DEM
 TYPE = 'CSV'
 COMPRESSION = 'GZIP'
 FIELD_DELIMITER = ','
@@ -47,7 +47,7 @@ TIMESTAMP_FORMAT = 'dd/mm/yyyy HH24:MI'
 NULL_IF = ('NULL');
 ```
 4. Put the file into stage
-`put file:///Users/user/Downloads/crime2.csv @"DE_JIANGREN_DEMO"."PUBLIC"."MY_CSV_STAGE" auto_com
+`put file:///Users/user/Downloads/crime2.csv @"DE_DEMO"."PUBLIC"."MY_CSV_STAGE" auto_com
                                                  press=true;`
 5. Create Schema in the database first to recieve data from crime2.csv
 ```python
@@ -73,7 +73,7 @@ STREET VARCHAR(255)
 ```python
 copy into CRIME_LITE
 from @my_csv_stage/crime2.csv.gz
-file_format = (format_name = CRIME_DEMO1)
+file_format = (format_name = CRIME_DEM)
 on_error = 'skip_file';
 ```  
 Then, it will show a success message with loaded process.
