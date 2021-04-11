@@ -1,16 +1,15 @@
 ---
 layout:     post
-title:      Install TensorFlow-GPU by Anaconda (conda install tensorflow-gpu)
-subtitle:   It might be the simplest way to install Tensorflow or Tensorflow-GPU by conda install in the conda environment
-date:       2019-03-29
-author:     Wang Pei
+title:      GCP Service Project Application
+subtitle:   Google app engine, google datastore
+date:       2021-04-04
+author:     Shuo Wang
 header-img: img/art-Anaconda-TensorFlow.jpg
 catalog: true
 tags:
     - ubuntu
     - TensorFlow
-    - 深度学习
-    - CUDA
+    - 
 ---
 
 
