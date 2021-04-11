@@ -16,14 +16,14 @@ tags:
 
 
 # Configure the development environment for the experiment
-1. Download SDK and App Engine, which can be downloaded online
-`gcloud components update` 
+1. Download SDK and App Engine, which can be downloaded online  
+`gcloud components update`   
 to update google cloud SDK  
-2. initialization gcloud make a configuration
-`gcloud init`
-In this part, it will show login account in this computer, e.g.
-`Choose the account you would like to use to perform operations for this configuration:
-[1] XXX@gmail.com
+2. initialization gcloud make a configuration  
+`gcloud init`  
+In this part, it will show login account in this computer, e.g.  
+`Choose the account you would like to use to perform operations for this configuration:  
+[1] XXX@gmail.com  
 [2] Log in with a new account`
 then you can select which account you would like to select.  
 3. Create a project
