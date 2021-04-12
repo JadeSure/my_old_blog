@@ -3,7 +3,7 @@ layout:     post
 title:      GCP Service Project Application with Flask Web Service
 subtitle:   Google app engine, google datastore, google cloud storage(bucket)
 date:       2021-04-04
-author:     Shuo Wang
+author:     Castle Cheng, Shawn Wang
 header-img: img/art-Anaconda-TensorFlow.jpg
 catalog: true
 tags:
