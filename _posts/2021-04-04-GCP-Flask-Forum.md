@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      GCP Service Project Application with Flask Web Service
-subtitle:   Google app engine, google datastore, google cloud storage(bucket)
+title:      GCP Service Based Project - Blog Forum Application
+subtitle:   Google app engine, google datastore, google cloud storage
 date:       2021-04-04
 author:     Castle Cheng, Shawn Wang
 header-img: img/post-bg-GCPblue.jpeg
