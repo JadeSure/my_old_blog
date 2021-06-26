@@ -4,7 +4,7 @@ title:      Java
 subtitle:   String, stack, heap, threading...
 date:       2021-06-25
 author:     Shuo Wang
-header-img:  img/post-bg-java-log.png
+header-img:  img/post-bg-java-log.jpeg
 catalog: true
 tags:
     - Java
