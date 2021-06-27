@@ -48,6 +48,19 @@ This place is for method and static variable.
 # Swtich method(data type?)
 It can only be String, char, or int.
   
+# Access modifier for Class(Default and public)
+1. Public: The class is accessible by any other class.  
+2. Default: The class is only accessible by classes in the same package. This is used when you don't specify a modifier.
+3. In the inner class, it can use 'private' or 'protected' modifier.
+
+# ArrayList and LinkedList?
+Use an ArrayList when:  
+1. You want to access random items frequently;
+2. You only need to add or remove elements at the end of the list.  
+Use a LinkedList when:  
+1. You only use the list by looping through it instead of accessing random items;
+2. You frequently need to add and remove items from the beginning, middle or end of the list.  
+[Manual Implementation codes](https://github.com/JadeSure/Data-Structure-and-Algorithm/tree/main/Project1%20Binary%20Space%20Partitioning%20(BSP))
 
 # Threading
 
