@@ -62,5 +62,35 @@ Use a LinkedList when:
 2. You frequently need to add and remove items from the beginning, middle or end of the list.  
 [Manual Implementation codes](https://github.com/JadeSure/Data-Structure-and-Algorithm/tree/main/Project1%20Binary%20Space%20Partitioning%20(BSP))
 
+# Iterator
+Iterator is an object that can be used to loop through collections. It is called an "iterator" because "iterating" is the technical term for looping, which is designed to easily change the collections that they loop through.
+```java
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<Integer> numbers = new ArrayList<Integer>();
+    numbers.add(12);
+    numbers.add(8);
+    numbers.add(2);
+    numbers.add(23);
+    Iterator<Integer> it = numbers.iterator();
+    while(it.hasNext()) {
+      Integer i = it.next();
+      if(i < 10) {
+        it.remove();
+      }
+    }
+    System.out.println(numbers);
+  }
+}
+```
+Because the collection is changing size at the same time that the code is trying to loop, it cannot use a for loop or a for-each loop to remove items.(remove())
+
+# throw and throws
+throw: used to throw an exception for a method, but it cannot throw multiple exceptions.(used inside the method). 
+throws: used to indicate what exception type my be thrown by a method, it can declare mutliple exceptions.(used with the method signature).
+
 # Threading
 
