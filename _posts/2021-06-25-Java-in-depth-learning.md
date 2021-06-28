@@ -103,6 +103,7 @@ throws: used to indicate what exception type my be thrown by a method, it can de
 8. In order to avoid competing, the higher priority threading can call sleep() or yield() method to give a chance for system to run lower or the same level of priority.
 9. `thread.setDaemon(true)` 守护者
 
+### Threading method
 1. Join(): force current threading to stop and wait other threadings finished. Then, implement current threading
 ```java
 public class JoinDemo {
@@ -194,4 +195,25 @@ class PrintNum implements Runnable{
 ```
 4. thread.interrupt() mark a stop point for the application
 
+### Threading KeyWords: synchronized
+In order to lock resources that one thread can access this method at this moment.(Lock a thread)
+```java
+public synchronized void beAttacted(long attack){
+    if(hp > 0) hp -= attack;
+}
+or
 
+public void beAttacked(long attack){
+    synchronized(this){
+        if(hp>0) hp -= attack;
+    }
+ }
+```
+1. One synchronized method need a lock before implementing util it has finished. Other threadings is in blocking. For instance method, it needs to lock the instance(block codes).   
+2. static method needs to add a lock for the static class. 
+|List|Table|String|Threading|
+|:----:|:----:|:----:|
+|ArrayList|HashMap|StringBuilder|Not Safe|
+|Vector|HashTable|StringBuffer|Safe|
+For ArrayList and Vector, when the memory is not enough, ArrayList * 150% / Vector * 200%.  
+HashMap allows null for both key and values. However, reversed results for HashTable.  
