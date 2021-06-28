@@ -211,9 +211,25 @@ public void beAttacked(long attack){
 ```
 1. One synchronized method need a lock before implementing util it has finished. Other threadings is in blocking. For instance method, it needs to lock the instance(block codes).   
 2. static method needs to add a lock for the static class. 
-| List | Table | String | Threading |
-| :----: | :----: | :----: |
-| ArrayList | HashMap | StringBuilder | Not Safe |
-| Vector | HashTable | StringBuffer | Safe |
+<table border="1" align="center">
+    <tr>
+        <th>List</th>
+        <th>Table</th>
+        <th>String</th>
+        <th>Threading</th>
+    </tr>
+    <tr>
+        <td>ArrayList</td>
+        <td>HashMap</td>
+        <td>StringBuilder</td>
+        <td>Not Safe</td>
+    </tr>
+    <tr>
+        <td>Vector</td>
+        <td>HashTable</td>
+        <td>StringBuffer</td>
+        <td>Safe</td>
+    </tr>
+</table>
 For ArrayList and Vector, when the memory is not enough, ArrayList * 150% / Vector * 200%.  
 HashMap allows null for both key and values. However, reversed results for HashTable.  
