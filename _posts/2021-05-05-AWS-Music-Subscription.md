@@ -47,15 +47,18 @@ aws_secret_access_key=SECRET_KEY)
 
 ```
 
-## Deploy Flask Application to EC2
-1. pip freeze -> requirements.txt in the local machine to fix the working environment
-2. pip install -r requirements.txt
+## Deploy Flask Application to Elastic BeanStalk
+1. pip freeze -> requirements.txt in the local machine to fix the working environment  
+2. pip install -r requirements.txt  
+3. Change the name app.py name to application.py  
+4. Deploy application into Elastic BeanStalk  
 
 
 
 
 ## Reference
 [aws code documentation](https://docs.aws.amazon.com/code-samples/latest/catalog/python-dynamodb-TryDax-01-create-table.py.html
-)
+)  
+[Tutorial of Deploying Flask into Elastic BeanStalk](https://www.youtube.com/watch?v=dhHOzye-Rms&list=LL&index=17)
 
 
