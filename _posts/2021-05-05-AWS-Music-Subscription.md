@@ -57,7 +57,7 @@ aws_secret_access_key=SECRET_KEY)
 
 
 ## Reference
-[aws code documentation](https://docs.aws.amazon.com/code-samples/latest/catalog/python-dynamodb-TryDax-01-create-table.py.html
+[AWS code documentation](https://docs.aws.amazon.com/code-samples/latest/catalog/python-dynamodb-TryDax-01-create-table.py.html
 )  
 [Tutorial of Deploying Flask into Elastic BeanStalk](https://www.youtube.com/watch?v=dhHOzye-Rms&list=LL&index=17)
 
