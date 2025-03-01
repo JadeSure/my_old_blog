@@ -36,6 +36,13 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-artifact@v4  # Updated to v4
+        with:
+          name: artifact
+          path: ./_site  # Ensure the correct path is provided
+          if-no-files-found: warn
+          compression-level: 6
+          overwrite: false
+          include-hidden-files: false
 
   # Deployment job
   deploy:
